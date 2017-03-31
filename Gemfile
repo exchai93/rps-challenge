@@ -4,6 +4,10 @@ ruby '2.4.0'
 
 gem 'sinatra'
 gem 'rake'
+gem 'sinatra'
+gem 'selenium-webdriver'
+gem 'shotgun'
+gem 'pry'
 
 group :test do
   gem 'rspec'
