@@ -9,4 +9,8 @@ class Rps < Sinatra::Base
     erb(:index)
   end
 
+  get '/start_game' do
+    erb(:start)
+  end
+  
 end
