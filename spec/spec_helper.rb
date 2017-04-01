@@ -11,9 +11,12 @@ Coveralls.wear!
 SimpleCov.start
 # run `open coverage/index.html` from the command line to view details
 
-require 'byebug'
-require 'capybara/rspec'
+ENV['RACK_ENV'] = 'test'
+require File.join(File.dirname(__FILE__), '..', './app/rps_web.rb')
 
 require 'capybara'
-require 'capybara/spec'
+#require 'capybara/spec'
 require 'rspec'
+require 'byebug'
+
+Capybara.app = Rps
