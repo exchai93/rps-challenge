@@ -1,0 +1,16 @@
+<center><h1> <%=@game.current_turn.name%>'s turn </h1></center>
+<hr>
+
+<center><h2> Now pick wisely...</h2></center>
+
+<center>
+<form action="/attack" method="get">
+  <label for="">Weapon of choice:</label>
+    <select name="weapon" id="action">
+      <option value="Rock"> Rock </option>
+      <option value="Paper"> Paper </option>
+      <option value="Scissors"> Scissors </option>
+  </select>
+  <button type="submit" value="submit">Attack!</button>
+</form>
+</center>
