@@ -1,5 +1,29 @@
 # RPS Challenge
 
+RPS game which allows players to enter their name, play rock paper scissors against the computer or another player.
+
+### Key features
+- Enter player name
+- Choose single or multiplayer
+- Start the game and make a weapon choice (rock paper or scissors)
+- Computer randomizes the outcome of the game
+- Declares the winner or a draw
+
+### To install:
+1. In the appropriate directory, git clone: https://github.com/exchai93/rps-challenge.git
+
+2. Create a local host
+3. Run rackup
+4. Play game
+
+### Class Design Approach
+| **Objects** | **Initialize**    | **Messages**
+|-------------|-------------------|--------------|             |                   |
+| Game        |   player_turn     | play
+|             |   computer_turn   | result
+| Player      |   name            | enter_name
+| Computer    |                   | weapon
+
 Instructions
 -------
 
@@ -9,7 +33,7 @@ Instructions
 * If you have a partial solution, **still check in a partial solution**
 * You must submit a pull request to this repo with your code by 9am Monday morning
 
-Task 
+Task
 ----
 
 Knowing how to build web applications is getting us almost there as web developers!
@@ -61,7 +85,7 @@ In code review we'll be hoping to see:
 
 * All tests passing
 * High [Test coverage](https://github.com/makersacademy/course/blob/master/pills/test_coverage.md) (>95% is good)
-* The code is elegant: every class has a clear responsibility, methods are short etc. 
+* The code is elegant: every class has a clear responsibility, methods are short etc.
 
 Reviewers will potentially be using this [code review rubric](docs/review.md).  Referring to this rubric in advance may make the challenge somewhat easier.  You should be the judge of how much challenge you want this weekend.
 
@@ -79,7 +103,7 @@ SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
 ]
-Coveralls.wear! 
+Coveralls.wear!
 ```
 
 You can see your [test coverage](https://github.com/makersacademy/course/blob/master/pills/test_coverage.md) when you submit a pull request, and you can also get a summary locally by running:
@@ -89,4 +113,3 @@ $ coveralls report
 ```
 
 This repo works with [Coveralls](https://coveralls.io/) to calculate test coverage statistics on each pull request.
-
