@@ -18,21 +18,23 @@ class Rps < Sinatra::Base
   end
 
   post '/names' do
-    player_1 = Player.new(params[:player_1])
-    @game = Game.create(player_1)
+    player = Player.new(params[:player])
+    @game = Game.create(player)
     redirect to('/play')
-  end
-
-  before do
-    @game = Game.instance
   end
 
   get '/play' do
     erb(:play)
   end
 
+  post '/play' do
+    weapon = params[:weapon]
+    redirect to('/attack')
+  end
+
   get '/attack' do
     erb(:attack)
   end
+
 
 end

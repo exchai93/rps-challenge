@@ -4,8 +4,9 @@ feature 'Enter names' do
     visit ('/')
     click_button 'Start playing!'
     click_button 'Flying solo'
+    fill_in 'name', with: 'Emily'
     click_button 'Submit'
-    expect(page).to have_content "'s turn"
+    expect(page).to have_content "Emily's turn"
   end
 
 end

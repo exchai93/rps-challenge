@@ -1,26 +1,43 @@
 class Game
 
-  def self.create(player_1)
-    @game = Game.new(player_1)
+  WEAPONS = [:rock, :paper, :scissors]
+
+  RULES = { rock: :scissors,
+            paper: :rock,
+            scissors: :paper }
+
+  def self.create(player, computer)
+    @game = Game.new(player, computer)
   end
 
   def self.instance
     @game
   end
 
-  attr_reader :players, :current_turn
+  attr_reader :player_turn, :computer_turn, :result
 
-  RULES = { rock: :scissors,
-            paper: :rock,
-            scissors: :paper }
+  def initialize(player, computer)
+    @player_turn = player
+    @computer_turn = computer
+    @result
+  end
 
-  def initialize(player_1)
-    @players = [player_1]
-    @current_turn = player_1
+  def play(choice_1, choice_2)
+    self.player_turn = choice_1
+    self.computer_turn = choice_2
+  end
+
+  def result
+    "It's a draw" if player_turn == computer_turn
+    if RULES[player_turn] == computer_turn
+      "You have won!"
+    else
+      "The computer wins!"
+    end
   end
 
   private
 
-  attr_writer :players, :current_turn
+  attr_writer :player_turn, :computer_turn, :result
 
 end

@@ -2,7 +2,7 @@ feature 'Start game' do
 
   scenario 'Able to play the game' do
     visit ('/')
-    expect(page).to have_content 'Rock, Paper, Scissors'
+    expect(page).to have_content 'rock paper scissors'
   end
 
   scenario 'Choose one player' do
